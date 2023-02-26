@@ -77,44 +77,21 @@ function show_prompt5() {
     }
 }
 
-
-// function thisFunc() {
-
-//     userAns = prompt("You CAN NOT cheat.");
-
-//     let thisArray = [10, 6, 4, "Hello"];
-//     for (let x = 0; x < thisArray.length; x++) {
-//         if (userAns == thisArray[x]) {
-//             alert("YES");
-
-//         }
-//         else if (userAns != thisArray[x]) {
-//             alert("WRONG");
-//             console.log(x);
-//             userAns = prompt("Try again!");
-//         }
-//     }
-
-
-// }
-
-
-
 function promptUser(expectedAnswer) {
     let chancesLeft = 3;
     let answeredCorrectly = 4;
     let userAns;
     while (chancesLeft > 0 && userAns != answeredCorrectly) {
-        userAns = prompt("Go on, guess.");
+        userAns = prompt("Go on, guess"+myname+"!");
 
 
 
         if (userAns < 4) {
-            alert("Your number is too low! Try again!");
+            alert("That's too low "+myname+ " Try harder!");
             chancesLeft--
         }
         else if (userAns > 4) {
-            alert("Your number is too high! Try again!");
+            alert("Your number is too high "+myname+" Try harder!");
             chancesLeft--
         }
 
@@ -130,7 +107,7 @@ function promptUser(expectedAnswer) {
 
 let exp = [10, 6, 4]
 function expr() {
-    let userAns = prompt("Answer");
+    let userAns = prompt("You CAN NOT cheat.");
     let answerIsRight = false
     for (let i = 0; i < exp.length; i++) {
         if (userAns == exp[i]) {
@@ -139,8 +116,8 @@ function expr() {
 
     }
     if (answerIsRight == true) {
-        alert ("YOU ARE RIGHT!")
+        alert ("YOU'RE RIGHT! Good job "+myname+"!")
     } else {
-        alert ("WRONG")
+        alert ("Reading comprehension fail.")
     }
 }
